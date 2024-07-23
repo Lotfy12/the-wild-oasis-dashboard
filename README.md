@@ -131,8 +131,8 @@ yarn add react-hook-form
 #### snippets 
 <div>
   <img src="https://github.com/user-attachments/assets/9435cf04-c36b-4bd9-8365-37988a0420dd"/>
-  <img src="https://github.com/user-attachments/assets/61eaa850-f873-4f0d-806d-2d164e12feba" height="300" width="405" />
-  <img src="https://github.com/user-attachments/assets/a5c70bdd-24f9-4303-8b1e-57e8f18aa7ff" height="300" width="405" />
+  <img src="https://github.com/user-attachments/assets/61eaa850-f873-4f0d-806d-2d164e12feba" height="300" width="410" />
+  <img src="https://github.com/user-attachments/assets/a5c70bdd-24f9-4303-8b1e-57e8f18aa7ff" height="300" width="410" />
 </div>
 
 #### Video
