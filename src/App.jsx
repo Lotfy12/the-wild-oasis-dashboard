@@ -16,7 +16,7 @@ function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        stateTime: 60 * 1000,
+        staleTime: 60 * 1000,
       },
     },
   });
@@ -25,7 +25,7 @@ function App() {
     <>
       <DarkModeProvider>
         <QueryClientProvider client={queryClient}>
-          <ReactQueryDevtools initialIsopen={false} />
+          <ReactQueryDevtools initialIsOpen={false} />
           <GlobalStyles />
           <BrowserRouter>
             <Routes>
@@ -49,7 +49,7 @@ function App() {
               success: { duration: 3000 },
               error: { duration: 5000 },
               style: {
-                fontStyle: "16px",
+                fontSize: "16px",
                 maxWidth: "500px",
                 padding: "16px 24px",
                 backgroundColor: "var(--color-grey-0)",

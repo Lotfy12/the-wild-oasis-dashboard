@@ -19,15 +19,15 @@ const StyledBody = styled.section`
 
 function BookingTable() {
   const { data, isLoading } = useQuery({
-    queryKey: ["booking key"],
+    queryKey: ["bookings"],
     queryFn: getBookings,
   });
+
+  if (isLoading) return <Spinner />;
 
   if (!data) {
     return <div>There is no data...</div>;
   }
-
-  if (isLoading) return <Spinner />;
   return (
     <>
       <Table>

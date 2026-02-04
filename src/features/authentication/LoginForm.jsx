@@ -4,12 +4,12 @@ import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
-import { UseLogin } from "./UseLogin";
+import { useLogin } from "./UseLogin";
 
 function LoginForm() {
   const [email, setEmail] = useState("test@gmail.com");
   const [password, setPassword] = useState("12345");
-  const { login } = UseLogin();
+  const { login } = useLogin();
 
   function handleSubmit(e) {
     e.preventDefault();

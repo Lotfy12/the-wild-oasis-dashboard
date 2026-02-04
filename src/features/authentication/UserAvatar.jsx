@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import ava from "../../../public/default-user.jpg";
 const StyledUserAvatar = styled.div`
   display: flex;
   gap: 1.2rem;
@@ -22,7 +22,7 @@ const Avatar = styled.img`
 function UserAvatar() {
   return (
     <StyledUserAvatar>
-      <Avatar src="../../../public/default-user.jpg" alt="user image" />
+      <Avatar src={ava} alt="user image" />
       <span>user name</span>
     </StyledUserAvatar>
   );

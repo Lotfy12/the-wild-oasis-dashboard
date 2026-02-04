@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { login as loginApi } from "../../services/ApiAuth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-export function UseLogin() {
+export function useLogin() {
   const navigate = useNavigate();
 
   const { mutate: login } = useMutation({

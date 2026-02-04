@@ -19,7 +19,7 @@ function BookingDetail() {
   const moveBack = useMoveBack();
 
   const { data: bookings } = useQuery({
-    queryKey: ["bookingss"],
+    queryKey: ["bookings", bookingId],
     queryFn: () => getBooking(bookingId),
   });
 

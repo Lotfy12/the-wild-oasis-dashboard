@@ -4,10 +4,11 @@ import { createCabin } from "../../services/getCabins";
 function useCreateCabin() {
   const queryClient = useQueryClient();
 
-  const { mutate } = useMutation(createCabin, {
+  const { mutate } = useMutation({
+    mutationFn: createCabin,
     onSuccess: () => {
       toast.success("New cabin successfully added");
-      queryClient.invalidateQueries("cabins");
+      queryClient.invalidateQueries({ queryKey: ["cabins"] });
     },
     onError: () => {
       toast.error("Could not add new cabin");

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { useState } from "react";
 import CreateCabinForm from "./CreateCabinForm";
-import UseDeleteCabin from "./UseDeleteCabin";
+import useDeleteCabin from "./UseDeleteCabin";
 import Button from "../../ui/Button";
 
 const TableRow = styled.div`
@@ -42,7 +42,7 @@ function CabinRow({ cabin }) {
 
   const { id, name, maxCapacity, regularPrice, discond } = cabin;
 
-  const { deleteCabin } = UseDeleteCabin();
+  const { deleteCabin } = useDeleteCabin();
   return (
     <>
       <TableRow role="row">

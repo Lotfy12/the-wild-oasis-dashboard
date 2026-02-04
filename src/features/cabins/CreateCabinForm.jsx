@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
 
-import UseCreateCabin from "./UseCreateCabin.js";
+import useCreateCabin from "./UseCreateCabin.js";
 
 import Input from "../../ui/Input";
 import Form from "../../ui/Form";
@@ -42,7 +42,7 @@ const Label = styled.label`
 function CreateCabinForm({ cabinToEdit = {} }) {
   const { id: editId, ...editValues } = cabinToEdit;
 
-  const { mutate } = UseCreateCabin();
+  const { mutate } = useCreateCabin();
 
   const { register, handleSubmit } = useForm({
     defaultValues: editValues,
