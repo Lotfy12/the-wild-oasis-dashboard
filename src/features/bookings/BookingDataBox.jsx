@@ -19,17 +19,27 @@ const StyledBookingDataBox = styled.section`
 
 const Header = styled.header`
   background-color: var(--color-brand-500);
-  padding: 2rem 4rem;
+  padding: 2rem 1.6rem;
   color: #e0e7ff;
   font-size: 1.8rem;
   font-weight: 500;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem 4rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
 
   svg {
     height: 3.2rem;
     width: 3.2rem;
+    flex-shrink: 0;
   }
 
   & div:first-child {
@@ -38,6 +48,7 @@ const Header = styled.header`
     gap: 1.6rem;
     font-weight: 600;
     font-size: 1.8rem;
+    flex-wrap: wrap;
   }
 
   & span {
@@ -48,11 +59,16 @@ const Header = styled.header`
 `;
 
 const Section = styled.section`
-  padding: 3.2rem 4rem 1.2rem;
+  padding: 2.4rem 1.6rem 1.2rem;
+
+  @media (min-width: 768px) {
+    padding: 3.2rem 4rem 1.2rem;
+  }
 `;
 
 const Guest = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1.2rem;
   margin-bottom: 1.6rem;
@@ -66,9 +82,10 @@ const Guest = styled.div`
 
 const Price = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.6rem 3.2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  padding: 1.6rem;
   border-radius: var(--border-radius-sm);
   margin-top: 2.4rem;
 
@@ -76,6 +93,14 @@ const Price = styled.div`
     props.isPaid ? "var(--color-green-100)" : "var(--color-yellow-100)"};
   color: ${(props) =>
     props.isPaid ? "var(--color-green-700)" : "var(--color-yellow-700)"};
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 3.2rem;
+    gap: 0;
+  }
 
   & p:last-child {
     text-transform: uppercase;
@@ -87,14 +112,20 @@ const Price = styled.div`
     height: 2.4rem;
     width: 2.4rem;
     color: currentColor !important;
+    flex-shrink: 0;
   }
 `;
 
 const Footer = styled.footer`
-  padding: 1.6rem 4rem;
+  padding: 1.6rem;
   font-size: 1.2rem;
   color: var(--color-grey-500);
-  text-align: right;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    padding: 1.6rem 4rem;
+    text-align: right;
+  }
 `;
 
 // A purely presentational component

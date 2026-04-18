@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 
 const HeadingGroup = styled.div`
   display: flex;
-  gap: 2.4rem;
+  gap: 3rem;
   align-items: center;
 `;
 
